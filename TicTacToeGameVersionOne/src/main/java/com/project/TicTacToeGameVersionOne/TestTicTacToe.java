@@ -57,7 +57,7 @@ public class TestTicTacToe {
 	}
 	
 	@Test
-	public void shouldReturnXifEnteredPlayerIsOf() {
+	public void shouldReturnXXXIfAnyLineFilledByX() {
 		String[] expected = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 		Assert.assertEquals("XXX",TicTacToe.findWhoWIns(expected));
 	}
