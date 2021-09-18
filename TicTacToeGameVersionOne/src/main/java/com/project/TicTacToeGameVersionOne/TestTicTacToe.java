@@ -35,5 +35,10 @@ public class TestTicTacToe {
 	public void shouldReturnFalseIfPlayerEntersInputNumberIsNotValid() {
 		Assert.assertFalse(TicTacToe.isValidInput());
 	}
+	
+	@Test
+	public void shouldHandleExceptionIfPlayerEntersInputNumberIsNotValid() {
+		Assert.assertFalse(TicTacToe.isValidInput());
+	}
 
 }

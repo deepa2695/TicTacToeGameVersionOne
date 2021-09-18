@@ -1,5 +1,6 @@
 package com.project.TicTacToeGameVersionOne;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -22,12 +23,17 @@ public class TicTacToe {
 		Scanner in = new Scanner(System.in);
 		int numInput = in.nextInt();
 		boolean isValid = true;
-		if (!(numInput > 0 && numInput <= 9)) {
-			isValid = false;
+		try {
+			if (!(numInput > 0 && numInput <= 9)) {
+				System.out.println("Invalid input; Please enter a valid number:");
+				isValid = false;
+			}
+		} catch (InputMismatchException e) {
+			System.out.println("Invalid input; Please enter a valid number:");
 		}
 		return isValid;
 	}
-	
+
 	protected static String messageToEnterNumberToXPlayer() {
 		String message = "X will play first. Enter a slot number to place X in:";
 		System.out.println(message);
