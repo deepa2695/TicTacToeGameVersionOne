@@ -20,6 +20,20 @@ public class TicTacToe {
 		Scanner in = new Scanner(System.in);
 		int numInput = in.nextInt();
 		isValidInput(numInput);
+		
+		markEnteredNumberInTheBox(numInput);
+	}
+
+	protected static boolean markEnteredNumberInTheBox(int numInput) {
+		turn = "X";
+		boolean dd = false;
+		if (board[numInput - 1].equals(
+				String.valueOf(numInput))) {
+			board[numInput - 1] = turn;
+			dd = true;
+			createGameBoard();
+		}
+		return dd;
 	}
 
 	protected static boolean isValidInput(Integer numInput) {

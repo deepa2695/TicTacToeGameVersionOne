@@ -28,17 +28,22 @@ public class TestTicTacToe {
 	
 	@Test
 	public void shouldReturnTrueIfPlayerEntersValidInputNumber() {
-		Assert.assertTrue(TicTacToe.isValidInput());
+		Assert.assertTrue(TicTacToe.isValidInput(6));
 	}
 	
 	@Test
 	public void shouldReturnFalseIfPlayerEntersInputNumberIsNotValid() {
-		Assert.assertFalse(TicTacToe.isValidInput());
+		Assert.assertFalse(TicTacToe.isValidInput(0));
 	}
 	
 	@Test
 	public void shouldHandleExceptionIfPlayerEntersInputNumberIsNotValid() {
-		Assert.assertFalse(TicTacToe.isValidInput());
+		Assert.assertFalse(TicTacToe.isValidInput(10));
 	}
 
+	@Test
+	public void shouldReturnTrueIfBoardNumberEqualsToEnteredNumber() {
+		Assert.assertTrue(TicTacToe.markEnteredNumberInTheBox(9));
+	}
+	
 }
