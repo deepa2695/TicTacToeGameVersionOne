@@ -7,7 +7,7 @@ import junit.framework.Assert;
 public class TestTicTacToe {
 	
 	@Test
-	public static void main(){
+	public void returnsWelcomeMessage(){
 		Assert.assertEquals("Welcome To Tic Tac Toe Game..!!!", TicTacToe.playTicTacToe());
 	}
 }
