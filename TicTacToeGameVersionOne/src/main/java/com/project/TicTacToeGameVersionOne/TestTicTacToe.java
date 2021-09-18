@@ -19,4 +19,11 @@ public class TestTicTacToe {
 			Assert.assertEquals(expected[a], output[a]); 
 		}
 	}
+	
+	@Test
+	public void shouldReturnTrueIfGivenInputMessageIsEqualToOutput(){
+		Assert.assertEquals("X will play first. Enter a slot number to place X in:", TicTacToe.messageToEnterNumberToXPlayer());
+	}
+	
+	
 }

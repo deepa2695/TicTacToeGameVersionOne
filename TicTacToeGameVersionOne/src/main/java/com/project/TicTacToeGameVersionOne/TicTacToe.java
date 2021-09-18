@@ -10,6 +10,14 @@ public class TicTacToe {
 		createGameBoardNumbers();
 		
 		createGameBoard();
+		
+		messageToEnterNumberToXPlayer();
+	}
+
+	protected static String messageToEnterNumberToXPlayer() {
+		String message = "X will play first. Enter a slot number to place X in:";
+		System.out.println(message);
+		return message;
 	}
 
 	protected static void createGameBoard() {
