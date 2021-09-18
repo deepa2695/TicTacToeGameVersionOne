@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class TicTacToe {
 
 	static String[] board;
+	static String turn;
 
 	public static void main(String[] args) {
 		playTicTacToe();
@@ -15,13 +16,14 @@ public class TicTacToe {
 		createGameBoard();
 
 		messageToEnterNumberToXPlayer();
-
-		isValidInput();
-	}
-
-	protected static boolean isValidInput() {
+		
 		Scanner in = new Scanner(System.in);
 		int numInput = in.nextInt();
+		isValidInput(numInput);
+	}
+
+	protected static boolean isValidInput(Integer numInput) {
+		
 		boolean isValid = true;
 		try {
 			if (!(numInput > 0 && numInput <= 9)) {
