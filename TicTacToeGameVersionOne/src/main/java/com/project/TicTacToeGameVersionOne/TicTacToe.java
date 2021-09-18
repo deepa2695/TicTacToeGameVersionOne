@@ -1,5 +1,6 @@
 package com.project.TicTacToeGameVersionOne;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -17,13 +18,33 @@ public class TicTacToe {
 
 		messageToEnterNumberToXPlayer();
 		
+		String winner = null;
 		Scanner in = new Scanner(System.in);
-		int numInput = in.nextInt();
-		isValidInput(numInput);
 		
-		markEnteredNumberInTheBox(numInput);
+		while(winner == null){
+			int numInput = in.nextInt();
+			isValidInput(numInput);
+			
+			markEnteredNumberInTheBox(numInput);
+			findWhoWIns(board);
+		}
+		
 	}
 
+	static String findWhoWIns(String[] board) {
+		String line = null;
+		for (int a = 0; a < 8; a++) {
+
+			switch (a) {
+			case 0:
+				line = board[0] + board[1] + board[2];
+				break;
+			}
+			
+		}
+
+		return line;
+	}
 	protected static boolean markEnteredNumberInTheBox(int numInput) {
 		turn = "X";
 		boolean dd = false;

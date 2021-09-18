@@ -56,4 +56,10 @@ public class TestTicTacToe {
 		Assert.assertEquals("X", TicTacToe.setPlayerTurn("O"));
 	}
 	
+	@Test
+	public void shouldReturnXifEnteredPlayerIsOf() {
+		String[] expected = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		Assert.assertEquals("XXX",TicTacToe.findWhoWIns(expected));
+	}
+	
 }
