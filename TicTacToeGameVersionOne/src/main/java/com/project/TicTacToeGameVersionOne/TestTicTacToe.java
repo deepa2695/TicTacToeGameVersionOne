@@ -46,4 +46,14 @@ public class TestTicTacToe {
 		Assert.assertTrue(TicTacToe.markEnteredNumberInTheBox(9));
 	}
 	
+	@Test
+	public void shouldReturnOifEnteredPlayerIsX() {
+		Assert.assertEquals("O", TicTacToe.setPlayerTurn("X"));
+	}
+	
+	@Test
+	public void shouldReturnXifEnteredPlayerIsO() {
+		Assert.assertEquals("X", TicTacToe.setPlayerTurn("O"));
+	}
+	
 }

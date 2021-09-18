@@ -31,9 +31,21 @@ public class TicTacToe {
 				String.valueOf(numInput))) {
 			board[numInput - 1] = turn;
 			dd = true;
+			
+			setPlayerTurn(turn);
 			createGameBoard();
 		}
 		return dd;
+	}
+
+	protected static String setPlayerTurn(String turn) {
+		if (turn.equals("X")) {
+			turn = "O";
+		}
+		else {
+			turn = "X";
+		}
+		return turn;
 	}
 
 	protected static boolean isValidInput(Integer numInput) {
