@@ -1,5 +1,7 @@
 package com.project.TicTacToeGameVersionOne;
 
+import java.util.Scanner;
+
 public class TicTacToe {
 
 	static String[] board;
@@ -13,8 +15,19 @@ public class TicTacToe {
 
 		messageToEnterNumberToXPlayer();
 
+		isValidInput();
 	}
 
+	protected static boolean isValidInput() {
+		Scanner in = new Scanner(System.in);
+		int numInput = in.nextInt();
+		boolean isValid = false;
+		if (numInput > 0 && numInput <= 9) {
+			isValid = true;
+		}
+		return isValid;
+	}
+	
 	protected static String messageToEnterNumberToXPlayer() {
 		String message = "X will play first. Enter a slot number to place X in:";
 		System.out.println(message);

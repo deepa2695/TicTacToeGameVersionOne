@@ -25,5 +25,11 @@ public class TestTicTacToe {
 		Assert.assertEquals("X will play first. Enter a slot number to place X in:",
 				TicTacToe.messageToEnterNumberToXPlayer());
 	}
+	
+	@Test
+	public void shouldReturnTrueIfPlayerEntersValidInputNumber() {
+		Assert.assertTrue(TicTacToe.isValidInput());
+	}
+	
 
 }
