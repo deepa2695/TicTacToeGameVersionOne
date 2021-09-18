@@ -21,9 +21,9 @@ public class TicTacToe {
 	protected static boolean isValidInput() {
 		Scanner in = new Scanner(System.in);
 		int numInput = in.nextInt();
-		boolean isValid = false;
-		if (numInput > 0 && numInput <= 9) {
-			isValid = true;
+		boolean isValid = true;
+		if (!(numInput > 0 && numInput <= 9)) {
+			isValid = false;
 		}
 		return isValid;
 	}

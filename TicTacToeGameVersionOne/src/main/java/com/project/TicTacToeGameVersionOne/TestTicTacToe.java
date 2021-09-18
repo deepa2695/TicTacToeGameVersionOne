@@ -31,5 +31,9 @@ public class TestTicTacToe {
 		Assert.assertTrue(TicTacToe.isValidInput());
 	}
 	
+	@Test
+	public void shouldReturnFalseIfPlayerEntersInputNumberIsNotValid() {
+		Assert.assertFalse(TicTacToe.isValidInput());
+	}
 
 }
