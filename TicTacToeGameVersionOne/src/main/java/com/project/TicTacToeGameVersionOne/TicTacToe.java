@@ -16,7 +16,7 @@ public class TicTacToe {
 
 	protected static String play() {
 		playTicTacToe();
-
+		//board = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 		createGameBoardNumbers();
 
 		createGameBoard();
@@ -33,7 +33,10 @@ public class TicTacToe {
 			winner = findWhoWIns(board);
 		}
 		if(winner == "X" || winner == "O"){
-			System.out.println("You-"+winner+ " win this game..!!");
+			System.out.println("You-"+winner+ " have won this game..!!");
+		}
+		if(winner =="draw"){
+			System.out.println("It is a draw.");
 		}
 		return winner;
 	}
@@ -80,6 +83,7 @@ public class TicTacToe {
 			
 		}
 		for (int a = 0; a < 9; a++) {
+			
 			if (Arrays.asList(board).contains(
 					String.valueOf(a + 1))) {
 				break;
@@ -93,6 +97,7 @@ public class TicTacToe {
 	protected static boolean markEnteredNumberInTheBox(int numInput) {
 		
 		boolean dd = false;
+		try{
 		if (board[numInput - 1].equals(
 				String.valueOf(numInput))) {
 			board[numInput - 1] = turn;
@@ -108,7 +113,9 @@ public class TicTacToe {
 			}
 			createGameBoard();
 		}
-		
+		}
+		catch(ArrayIndexOutOfBoundsException ee){
+		}
 		return dd;
 	}
 
