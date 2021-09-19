@@ -10,6 +10,11 @@ public class TicTacToe {
 	static String turn;
 
 	public static void main(String[] args) {
+		play();
+		
+	}
+
+	protected static String play() {
 		playTicTacToe();
 
 		createGameBoardNumbers();
@@ -26,12 +31,11 @@ public class TicTacToe {
 			isValidInput(numInput);
 			markEnteredNumberInTheBox(numInput);
 			winner = findWhoWIns(board);
-			System.out.println(winner);
 		}
 		if(winner == "X" || winner == "O"){
-			System.out.println("You-"+winner+ " this game..!!");
+			System.out.println("You-"+winner+ " win this game..!!");
 		}
-		
+		return winner;
 	}
 
 	static String findWhoWIns(String[] board) {
@@ -104,6 +108,7 @@ public class TicTacToe {
 			}
 			createGameBoard();
 		}
+		
 		return dd;
 	}
 
@@ -152,7 +157,6 @@ public class TicTacToe {
 
 		for (int a = 0; a < 9; a++) {
 			board[a] = String.valueOf(a + 1);
-			System.out.println(board[a]);
 		}
 
 		return board;

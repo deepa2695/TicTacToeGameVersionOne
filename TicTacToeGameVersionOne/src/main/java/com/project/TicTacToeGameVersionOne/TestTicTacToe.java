@@ -68,4 +68,9 @@ public class TestTicTacToe {
 		Assert.assertEquals("OOO",TicTacToe.findWhoWIns(expected));
 	}
 	
+	@Test()
+	public void shouldHandleExceptionIfPlayerEnterdInvalidInput() {
+		Assert.assertTrue (TicTacToe.markEnteredNumberInTheBox(0));
+	}
+	
 }
