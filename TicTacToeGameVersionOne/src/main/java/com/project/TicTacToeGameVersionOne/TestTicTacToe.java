@@ -62,4 +62,10 @@ public class TestTicTacToe {
 		Assert.assertEquals("XXX",TicTacToe.findWhoWIns(expected));
 	}
 	
+	@Test
+	public void shouldReturnOOOIfAnyLineFilledByO() {
+		String[] expected = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		Assert.assertEquals("OOO",TicTacToe.findWhoWIns(expected));
+	}
+	
 }

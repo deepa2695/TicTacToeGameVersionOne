@@ -25,7 +25,11 @@ public class TicTacToe {
 			int numInput = in.nextInt();
 			isValidInput(numInput);
 			markEnteredNumberInTheBox(numInput);
-			findWhoWIns(board);
+			winner = findWhoWIns(board);
+			System.out.println(winner);
+		}
+		if(winner == "X" || winner == "O"){
+			System.out.println("You-"+winner+ " this game..!!");
 		}
 		
 	}
@@ -60,9 +64,13 @@ public class TicTacToe {
 				line = board[2] + board[4] + board[6];
 				break;
 			}
-			//For X winner
+			
 			if (line.equals("XXX")) {
 				return "X";
+			}
+			
+			if (line.equals("OOO")) {
+				return "O";
 			}
 			
 			
